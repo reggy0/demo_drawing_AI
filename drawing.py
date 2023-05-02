@@ -36,7 +36,7 @@ def generate_text():
   prompt = create_prompt(training_cases, keywords)
 
     # Generate text using the HappyGeneration model
-  args_beam = GENSettings(num_beams=5, no_repeat_ngram_size=2, early_stopping=True, min_length=5, max_length=150)
+  args_beam = GENSettings(num_beams=5, no_repeat_ngram_size=2, early_stopping=True, min_length=5, max_length=400)
     # Generate text using the HappyGeneration model
   output_text= happy_gen.generate_text(prompt, args=args_beam)
 
